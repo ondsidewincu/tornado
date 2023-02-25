@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Bolton';
+  src: local('Bolton-Regular'),
+  url('../fonts/Bolton-Regular.woff2') format('woff2'),
+  url('../fonts/Bolton-Regular.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'Bolton';
+  src: local('Bolton-Medium'), url('../fonts/Bolton-Medium.woff2') format('woff2'),
+  url('../fonts/Bolton-Medium.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Bolton';
+  src: local('Bolton-Bold'), url('../fonts/Bolton-Bold.woff2') format('woff2'),
+  url('../fonts/Bolton-Bold.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Thin'),
+  url('../fonts/Roboto-Thin.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Regular'),
+  url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Bold'),
+  url('../fonts/Roboto-Bold.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}

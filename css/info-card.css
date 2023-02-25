@@ -1,0 +1,346 @@
+/******************* INFO CARD & FLIPPING CARD CSS */
+
+
+#full-chart {
+    opacity: 0;
+  }
+  
+  #chartjs-tooltip {
+    display: none;
+  }
+  
+  .app canvas {
+    opacity: 0;
+  }
+  
+  .app iframe {
+    display: none !important;
+  }
+  
+  .info-card-list-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .info-card-list {
+    position: relative;
+    min-height: 610px;
+  }
+  
+  .nvstr-image {
+    width: 100%;
+  }
+  
+  .data-image {
+    width: 80%;
+    margin-left: 10%;
+  }
+  
+  .flip {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+  }
+  
+  .flip button {
+    width: 150px;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 3.5px 5px;
+    backface-visibility: hidden;
+  }
+  
+  .flip button:hover {
+    font-size: 16px;
+    border: none;
+  }
+  
+  .flip button:focus {
+    outline: none;
+  }
+  
+  .info-card {
+    position: absolute;
+    height: 550px;
+    width: 75%;
+    max-width: 750px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #dcdcdc;
+    z-index: 1;
+    -webkit-transition: all 300ms ease-in;
+    -moz-transition: all 300ms ease-in;
+    -ms-transition: all 300ms ease-in;
+    -o-transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.4);
+  }
+  
+  .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 300ms ease-in;
+    -moz-transition: all 300ms ease-in;
+    -ms-transition: all 300ms ease-in;
+    -o-transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
+  }
+  
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 300ms ease-in;
+    -moz-transition: all 300ms ease-in;
+    -ms-transition: all 300ms ease-in;
+    -o-transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
+    transform-style: preserve-3d;
+  }
+  
+  .front {
+    z-index: 1;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  
+  .back {
+    -webkit-transform: rotateY(-179deg);
+    -moz-transform: rotateY(-179deg);
+    -ms-transform: rotateY(-179deg);
+    -o-transform: rotateY(-179deg);
+    transform: rotateY(-179deg);
+  }
+  
+  .flipped .front {
+    -webkit-transform: perspective(1000px) rotateY(180deg);
+    -moz-transform: perspective(1000px) rotateY(180deg);
+    -ms-transform: perspective(1000px) rotateY(180deg);
+    -o-transform: perspective(1000px) rotateY(180deg);
+    transform: perspective(1000px) rotateY(180deg);
+  }
+  
+  .flipped .back {
+    z-index: 1;
+    -webkit-transform: perspective(1000px) rotateY(0deg);
+    -moz-transform: perspective(1000px) rotateY(0deg);
+    -ms-transform: perspective(1000px) rotateY(0deg);
+    -o-transform: perspective(1000px) rotateY(0deg);
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  
+  .fin-chart {
+    position: relative;
+    z-index: inherit;
+    transform: inherit;
+  }
+  
+  .fin-chart iframe {
+    z-index: inherit !important;
+    transform: inherit !important;
+  }
+  
+  .thought-list::-webkit-scrollbar {
+    background: none;
+  }
+  
+  @-webkit-keyframes chart-fade-in {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    65% {opacity: .5;}
+    100% {opacity: 1;}
+  }
+  @keyframes chart-fade-in {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    65% {opacity: 0.5;}
+    100% {opacity: 1;}
+  }
+  
+  @-webkit-keyframes chart-fade-out {
+    0% {opacity: 1;}
+    45% {opacity: 0;}
+    65% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+  @keyframes chart-fade-out {
+    0% {opacity: 1;}
+    45% {opacity: 0;}
+    65% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+  
+  .chart-fade-in {
+    animation: chart-fade-in 600ms forwards !important;
+  }
+  
+  .chart-fade-out {
+    animation: chart-fade-out 600ms forwards !important;
+  }
+  
+  /* .info-card-tab {
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    padding: 0px 5px;
+    font-size: 24px;
+    color: #fff;
+    height: 80px;
+    width: 40px;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background: rgba(145, 145, 145, .6);
+  } */
+  
+  .fin-chart {
+    width: 90%;
+    margin-top: 25px;
+    margin-left: 5%;
+  }
+  
+  .fin-data-details-container {
+    position: relative;
+  }
+  
+  .scroll-notice {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #ccc;
+  }
+  
+  .fin-data-details-container table {
+    height: 133px;
+    display: block;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.7)
+  }
+  
+  .fin-data-details-container table:first-child {
+    margin-left: calc( 5% - 5px);
+  }
+  
+  .fin-data-details-container tbody {
+    display: block;
+    width: 100%;
+  }
+  
+  .fin-data-details-container td {
+    float: left;
+  }
+  
+  .fin-data-details-container  .row-data {
+    float: right;
+    text-align: right;
+  }
+  
+  .fin-data-details-container .fin-data-row {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+  }
+  
+  .fin-data-detail-heading {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(0,0,0,0.5);
+    margin: 10px 0;
+    font-weight: 400;
+  }
+  
+  .info-card .current-price-container {
+    margin: 0px 0 -20px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+  }
+  
+  .info-card .current-price {
+    display: block;
+    font-size: 36px;
+  }
+  
+  .info-card .current-price-change-container {
+    display: block;
+    padding: 0px 15px 5px 15px;
+  }
+  .info-card .current-price-change-container p {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .info-card .dollar-sign {
+    font-size: 14px;
+    position: absolute;
+    margin-left: -9px;
+    margin-top: 10px;
+  }
+  
+  .info-card .current-price .plus-sign {
+    font-size: 14px;
+    position: absolute;
+    margin-left: -10px;
+    margin-top: 1px;
+  }
+  .info-card .current-price-change-container .dollar-sign {
+    font-size: 14px;
+    position: absolute;
+    margin-left: -9px;
+    margin-top: 1px;
+  }
+  .info-card .current-price-change-container .percent-sign {
+    font-size: 14px;
+    position: absolute;
+    margin-left: 1px;
+    margin-top: 1px;
+  }
+  
+  .gain-highlight {
+    color: #6BB166;
+  }
+  
+  .loss-highlight {
+    color: #ff7666;
+  }
+  
+  .sector-container {
+    text-align: center;
+    padding: 5px 15px;
+    margin: 0;
+    color: #bbb;
+    font-size: 14px;
+  }
+  
+  
+  

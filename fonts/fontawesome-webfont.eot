@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tornado.com | Invest better than yesterday</title>
+    <meta name="Description" content="Tornado gives you the insights & community to turn your instincts into smart investing. Join today to sharpen your skills & grow your gains.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tornado.com/">
+    <meta property="og:title" content="Tornado.com | Invest better than yesterday">
+    <meta property="og:description" content="Tornado gives you the insights & community to turn your instincts into smart investing.">
+    <meta property="og:image" content="../images/share-card.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tornado.com/">
+    <meta property="twitter:title" content="Tornado.com | Invest better than yesterday">
+    <meta property="twitter:description" content="Tornado gives you the insights & community to turn your instincts into smart investing.">
+    <meta property="twitter:image" content="https://tornado.com/images/share-card.png">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+
+    <meta name="apple-itunes-app" content="app-id=1481266478, app-argument=nvstr">
+
+    <link rel="icon" href="../images/favicon-260.png">
+
+    <link href="/app/fonts/Bolton-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link href="/app/fonts/Bolton-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link href="/app/fonts/Bolton-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link href="/app/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link href="/app/fonts/Roboto-Thin.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link href="/app/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/idea-lab.css">
+    <link rel="stylesheet" href="../css/idea-title.css">
+    <link rel="stylesheet" href="../css/info-card.css">
+
+    <script src="../js/jquery.3.6.0-min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/jquery-ui-datepicker.js"></script>
+
+    <script src="../js/jquery-remoti.js"></script>
+    <script src="../js/jquery-iframe.js"></script>
+    <script src="../js/jquery-scripting.js"></script>
+
+
+    <!-- Hotjar Tracking Code for https://tornado.com -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:2715894,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+  <script type="module" crossorigin src="../js/index.692cdaac.js"></script>
+  <link rel="modulepreload" href="/app/assets/vendor.46127f98.js">
+</head>
+  <body>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6980989574649341" crossorigin="anonymous"></script>
+    <script>0</script>
+
+    <div id="login-redirect" style="display: none; height: 100vh; align-items: center; justify-content: center; font-family: Helvetica, sans-serif; line-height: 18px;">
+      <div style="background: #fff; border: 1px solid #ccc; border-radius: 5px; padding: 24px; color: #222; width: 300px; margin-top: -10%;">
+        <div style="text-align: center; padding-bottom: 24px;">
+          <p>
+            Welcome to the Tornado white label preview
+          </p>
+        </div>
+        <div style="text-align: center; padding-bottom: 4px;">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      try {
+        const wrapper = document.getElementById('login-redirect');
+        if (window.location.hostname.includes('web')) {
+          wrapper.style.display = 'flex';
+
+          if (window.location.pathname === '/login') {
+            const link = document.getElementById('login');
+            link.style.display = 'block';
+          }
+          if (window.location.pathname === '/signup') {
+            const link = document.getElementById('signup');
+            link.style.display = 'block';
+          }
+        }
+        else {
+          link.remove();
+
+        }
+      } catch (e) {
+        // console.error(e);
+      }
+    </script>
+
+    <div id="root" style="min-height: 100vh;"></div>
+
+    
+  </body>
+</html>
