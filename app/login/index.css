@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Bolton-Regular';
+  src: local('Bolton-Regular'),
+    url("Bolton-Regular.woff2") format('woff2'),
+    url("Bolton-Regular.ttf") format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bolton-Medium';
+  src: local('Bolton-Medium'), url("") format('woff2'),
+    url("") format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bolton-Bold';
+  src: local('Bolton-Bold'), url("Bolton-Bold.woff2") format('woff2'),
+    url("Bolton-Bold.ttf") format('truetype');
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: Bolton-Regular, Segoe UI, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.bold {
+  font-family: 'Bolton-Bold';
+}

@@ -1,0 +1,392 @@
+
+@-webkit-keyframes wiggle {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(4deg);}
+    75% {transform: rotate(-4deg);}
+    100% {transform: rotate(0deg);}
+  }
+  @keyframes wiggle {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(4deg);}
+    75% {transform: rotate(-4deg);}
+    100% {transform: rotate(0deg); }
+  }
+  
+  @-webkit-keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    /* 10% {
+      transform: scale(.96);
+    }
+    20% {
+      transform: scale(1.04);
+    }
+    52%, */
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    /* 42% {
+      transform: scale(.96);
+    }
+    52% {
+      transform: scale(1.04);
+    }
+    62% {
+      transform: scale(1);
+    } */
+    
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes blip {
+    0% {
+      transform: scaleX(1) scaleY(1);
+      opacity: 0;
+    }
+    10% {
+      transform: scaleX(1) scaleY(1);
+      opacity: .4;
+    }
+    30%, 
+    99% {
+      transform: scaleX(1.45) scaleY(1.45);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleX(1) scaleY(1);
+      opacity: 0;
+    }
+  }
+  
+  .tile-list-container {
+    text-align: center;
+    border-radius: 15px;
+    color: #4C4C4C;
+    padding: 10px 0 20px 0;
+    margin: auto;
+    background-color: #fff;
+    white-space : nowrap;
+    overflow-x: scroll;
+    z-index: 5;
+  }
+  
+  .tile-list-container::-webkit-scrollbar {
+    background: none;
+  }
+  
+  
+  .tile-container-heading {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0 10px 0;
+    font-size: 18px;
+    pointer-events: none;
+  }
+  
+  .tile-container-background-msg {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.03);
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0 10px 0;
+    font-size: 64px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    pointer-events: none;
+  }
+  
+  .background-icon {
+    position: absolute;
+    top: 75px;
+    left: calc( 50% - 20px );
+    font-size: 24px;
+    color: rgba( 0,0,0, .6);
+    z-index: -1;
+  }
+  
+  .empty-card {
+    height: 91px;
+  }
+  
+  .well-ideas {
+    position: relative;
+    height: 258px;
+    padding: 25px 0 15px 0;
+    text-align: center;
+    overflow: visible;
+  }
+  
+  .well-container-heading {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+    pointer-events: none;
+  }
+  
+  .buy-ideas .idea-card {
+    transform: scale(1);
+    transition: transform 200ms ease-in, box-shadow 100ms ease-in;
+  }
+  
+  .sell-ideas .idea-card {
+    transform: scale(1);
+    transition: transform 200ms ease-in, box-shadow 100ms ease-in;
+  }
+  
+  .idea-card {
+    position: absolute;
+    font-size: 28px;
+    color: rgba(0,0,0,.6);
+    width: 80px;
+    height: 80px;
+    padding: 15px 0 0 0;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    cursor: move;
+    z-index: 3;
+  
+    transition: top 600ms ease-in,
+                left 600ms ease-in,
+                transform 200ms ease-in,
+                opacity 600ms ease-in;
+  }
+  
+  .idea-card-preview {
+    transition: none;
+    z-index: 100000;
+  }
+  
+  .idea-card-hover {
+    transform: scale(1.15) !important;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.5);
+    transition: transform 200ms ease-in, box-shadow 100ms ease-in;
+    z-index: 3;
+  }
+  
+  .placed {
+    position: relative !important;
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    top: 0 !important;
+    left: 0 !important;
+    margin: 5px 12.5px 0 12.5px;
+  }
+  
+  .tile-company-name {
+    text-align: center;
+    font-size: 8px;
+    font-weight: 200;
+    color: #b5b5b5;
+  }
+  
+  .tile-symbol {
+    text-align: center;
+    font-size: 24px;
+    color: rgba(0,0,0,.5);
+    margin-bottom: -5px;
+  }
+  
+  .long-symbol {
+    font-size: 21px !important;
+    padding-top: 2px !important;
+  }
+  
+  /* .idea-card-heartbeat-container {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: yellow;
+  
+  } */
+  
+  .buy-ideas .idea-card {
+    left: 0 !important;
+  }
+  
+  
+  
+  .sell-ideas .idea-card {
+    left: 0 !important;
+  }
+  
+  .idea-card:active {
+    -webkit-animation: none;
+    animation: none;
+  }
+  
+  .heartbeat {
+    -webkit-animation: 1500ms forwards infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: heartbeat 1500ms forwards infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-delay: 5s;
+  }
+  
+  .heartbeat:after {
+    background-color: rgba(120, 30, 0, 1);
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    animation: blip 2500ms forwards infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: background-color .3s ease;
+  }
+  
+  .heartbeat.buy:after {
+    background-color: rgba(120, 230, 120, .8);
+  }
+  .heartbeat.sell:after {
+    background-color: rgba(49, 82, 212, 0.7);
+  }
+  
+  .buy-ideas {
+    background-color: rgba(199, 251, 198, 0.8);
+    -webkit-box-shadow: inset 0px 1px 6px 0px rgba(0, 0, 0, 0.3);;
+    -moz-box-shadow: inset 0px 1px 6px 0px rgba(0, 0, 0, 0.3);;
+    box-shadow: inset 0px 1px 6px 0px rgba(0, 0, 0, 0.3);;
+  }
+  
+  .sell-ideas {
+    background-color: rgba(223, 234, 249, 0.8);
+    -webkit-box-shadow: inset 0px 1px 6px 0px rgba(0, 0, 0, 0.3);;
+    -moz-box-shadow: inset 0px 1px 6px 0px rgba(0, 0, 0, 0.3);;
+    box-shadow: inset 0px 1px 6px 0px rgba(0, 0, 0, 0.3);;
+  }
+  
+  .drop-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .drop-highlight-undecided {
+    background-color: rgba(73, 73, 73, 0.10);
+  }
+  
+  .drop-highlight-buy {
+    background-color: rgba(182, 250, 180, 0.80);
+  }
+  
+  .drop-highlight-well {
+    background-color: rgba(73, 73, 73, 0.10);
+  }
+  
+  .drop-highlight-sell {
+    background-color: rgba(206, 224, 248, .8);
+  }
+  
+  .stripe-container {
+    position: absolute;
+    bottom: 7px;
+    left: 0px;
+    right: 0px;
+    height: 10px;
+    z-index: 4;
+    opacity: .6;
+    border: 1px solid rgba(125, 125, 125, 0.3);
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    overflow: hidden;
+  }
+  
+  .sentiment-stripe-sell {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    background-color: rgba(206, 225, 251, 1);
+    z-index: 4;
+  }
+  
+  .sentiment-stripe-buy {
+    position: absolute;
+    top: 1;
+    left: 0;
+    height: 8px;
+    border: 1px solid rgba(125, 125, 125, 0.1);
+    background-color: rgba(182, 250, 180, 1);
+    z-index: 4;
+  }
+  
+  .sentiment-stripe-neutral {
+    position: absolute;
+    top: 1;
+    left: 0;
+    height: 8px;
+    border: 1px solid rgba(125, 125, 125, 0.1);
+    height: 10px;
+    background-color: rgba(125, 125, 125, 0.1);
+    z-index: 3;
+  }
+  
+  .button-container {
+    display: inline;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  .import-ideas-button {
+    display: inline;
+    background-color: #fff;
+    color: #2d3e55;
+    font-weight: 300;
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 35px;
+    cursor: pointer;
+  }
+  
+  .remove-ideas-button {
+    display: inline;
+    background-color: #fff;
+    color: #2d3e55;
+    font-weight: 300;
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 35px;
+    cursor: pointer;
+  }
+  
+  .import-ideas-button:hover {
+    background-color: #2d3e55;
+    color: #fff;
+  }
+  
+  .remove-ideas-button:hover {
+    background-color: #2d3e55;
+    color: #fff;
+  }
+  
